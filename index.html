@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Khám phá 8 món ăn đặc sản trứ danh tại Trà Vinh: dừa sáp, bún nước lèo, bánh tét Trà Cuôn kèm địa chỉ và công thức.">
+  <title>Các Món Ăn Nên Thử Khi Đến Trà Vinh</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3f6f4;
+      color: #2c3e50;
+    }
+
+    /* =========================================
+       1. TRANG CHỦ RIÊNG BIỆT (FULL SCREEN)
+       ========================================= */
+    .trang-chu {
+      min-height: 85vh;
+      background: linear-gradient(rgba(15, 32, 22, 0.65), rgba(15, 32, 22, 0.75)), url('https://images.pexels.com/photos/5844664/pexels-photo-5844664.jpeg?auto=compress&cs=tinysrgb&w=1600');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .trang-chu .nhan-phu {
+      background-color: #27ae60;
+      color: #fff;
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .trang-chu h1 {
+      margin: 0 0 20px;
+      font-size: 48px;
+      font-weight: 800;
+      max-width: 850px;
+      line-height: 1.25;
+      text-shadow: 2px 4px 10px rgba(0,0,0,0.4);
+    }
+    .trang-chu p {
+      max-width: 650px;
+      margin: 0 auto 35px;
+      font-size: 19px;
+      line-height: 1.6;
+      color: #ecf0f1;
+    }
+    .nut-bat-dau {
+      display: inline-block;
+      background-color: #e74c3c;
+      color: white;
+      text-decoration: none;
+      padding: 15px 36px;
+      border-radius: 50px;
+      font-size: 17px;
+      font-weight: bold;
+      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+      transition: transform 0.2s, background 0.2s;
+    }
+    .nut-bat-dau:hover {
+      background-color: #c0392b;
+      transform: translateY(-3px);
+    }
+
+    /* =========================================
+       TIÊU ĐỀ PHÂN KHU RÕ RÀNG
+       ========================================= */
+    .tieu-de-khu-vuc {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .tieu-de-khu-vuc h2 {
+      font-size: 34px;
+      font-weight: 800;
+      color: #1e3d2b;
+      margin: 0 0 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .tieu-de-khu-vuc h2 span {
+      color: #e74c3c;
+    }
+    .tieu-de-khu-vuc .gach-chan {
+      width: 80px;
+      height: 4px;
+      background-color: #27ae60;
+      margin: 0 auto 12px;
+      border-radius: 2px;
+    }
+    .tieu-de-khu-vuc p {
+      color: #636e72;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    /* =========================================
+       2. KHU VỰC MỤC LỤC RIÊNG BIỆT, RỘNG RÃI
+       ========================================= */
+    .khu-vuc-muc-luc {
+      background-color: #ffffff;
+      padding: 60px 20px;
+      border-bottom: 2px solid #e1e8e3;
+    }
+    .khung-noi-dung {
+      max-width: 1100px;
+      margin: auto;
+    }
+    .luoi-muc-luc {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .luoi-muc-luc a {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background-color: #f4f9f6;
+      border: 2px solid #d5e8dc;
+      padding: 16px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #1e3d2b;
+      font-weight: 700;
+      font-size: 16px;
+      transition: all 0.25s ease;
+    }
+    .luoi-muc-luc a .so-thu-tu {
+      background-color: #27ae60;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .luoi-muc-luc a:hover {
+      background-color: #27ae60;
+      border-color: #27ae60;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(39, 174, 96, 0.25);
+    }
+    .luoi-muc-luc a:hover .so-thu-tu {
+      background-color: white;
+      color: #27ae60;
+    }
+
+    /* =========================================
+       3. DANH SÁCH MÓN ĂN & CÔNG THỨC HÀNG NGANG
+       ========================================= */
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .danh-sach-mon {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .mon-an {
+      background-color: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      border: 1px solid #e6ece8;
+      scroll-margin-top: 30px;
+    }
+
+    /* Phần trên của thẻ món ăn: Ảnh bên trái - Thông tin bên phải */
+    .phan-tren-mon {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .phan-tren-mon img {
+      width: 340px;
+      min-height: 250px;
+      object-fit: cover;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .noi-dung-mon {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .noi-dung-mon h3 {
+      color: #1e3d2b;
+      font-size: 24px;
+      font-weight: 800;
+      margin: 0 0 12px;
+      border-left: 5px solid #27ae60;
+      padding-left: 12px;
+    }
+
+    .mo-ta {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0 0 16px;
+    }
+
+    .dia-chi {
+      background-color: #f9fbf9;
+      border: 1px dashed #27ae60;
+      border-radius: 8px;
+      padding: 12px 15px;
+      font-size: 14px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .dia-chi strong {
+      color: #c0392b;
+    }
+
+    .hang-nut-bam {
+      display: flex;
+      gap: 12px;
+      margin-top: auto;
+      flex-wrap: wrap;
+    }
+
+    .nut-toggle {
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+    .nut-toggle:hover {
+      background-color: #219653;
+    }
+
+    .nut-ve-muc-luc {
+      background-color: #ecf0f1;
+      color: #2c3e50;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    .nut-ve-muc-luc:hover {
+      background-color: #dfe6e9;
+    }
+
+    /* Phần Công thức & Nguyên liệu hiện theo HÀNG NGANG (2 cột song song) */
+    .cong-thuc-ngang {
+      display: none; /* Ẩn mặc định, bấm nút mới mở */
+      background-color: #f4f9f6;
+      border-top: 2px solid #27ae60;
+      padding: 25px 28px;
+    }
+
+    .cong-thuc-ngang.dang-mo {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 30px;
+      animation: hienRa 0.3s ease;
+    }
+
+    @keyframes hienRa {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .cot-nguyen-lieu, .cot-cach-lam {
+      background: white;
+      padding: 18px 20px;
+      border-radius: 10px;
+      border: 1px solid #dce8e0;
+    }
+
+    .cong-thuc-ngang h4 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      color: #27ae60;
+      text-transform: uppercase;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    .cong-thuc-ngang ul, .cong-thuc-ngang ol {
+      margin: 0;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #34495e;
+    }
+
+    .cong-thuc-ngang li {
+      margin-bottom: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      color: #7f8c8d;
+      font-size: 14px;
+      background-color: #ffffff;
+      border-top: 1px solid #e1e8e3;
+    }
+
+    /* Giao diện trên điện thoại */
+    @media (max-width: 768px) {
+      .trang-chu h1 {
+        font-size: 32px;
+      }
+      .phan-tren-mon {
+        flex-direction: column;
+      }
+      .phan-tren-mon img {
+        width: 100%;
+        height: 220px;
+      }
+      .cong-thuc-ngang.dang-mo {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. TRANG CHỦ RIÊNG BIỆT -->
+  <header class="trang-chu" id="trang-chu">
+    <span class="nhan-phu">Cẩm Nang Ẩm Thực Địa Phương</span>
+    <h1>Các Món Ăn Nên Thử Khi Đến Trà Vinh</h1>
+    <p>Hành trình khám phá tinh hoa ẩm thực giao thoa văn hóa Kinh – Khmer – Hoa đậm đà bản sắc miền Tây Nam Bộ.</p>
+    <a href="#muc-luc" class="nut-bat-dau">Xem Mục Lục Món Ngon ↓</a>
+  </header>
+
+  <!-- 2. KHU VỰC MỤC LỤC RIÊNG BIỆT -->
+  <section class="khu-vuc-muc-luc" id="muc-luc" aria-label="Mục lục món ăn">
+    <div class="khung-noi-dung">
+      <div class="tieu-de-khu-vuc">
+        <h2>Mục Lục <span>8 Món Đặc Sản</span></h2>
+        <div class="gach-chan"></div>
+        <p>Chọn nhanh món ăn bạn muốn tìm hiểu để trượt thẳng tới chi tiết</p>
+      </div>
+
+      <ul class="luoi-muc-luc">
+        <li><a href="#mon-1"><span class="so-thu-tu">1</span> Dừa Sáp Cầu Kè</a></li>
+        <li><a href="#mon-2"><span class="so-thu-tu">2</span> Bún Nước Lèo</a></li>
+        <li><a href="#mon-3"><span class="so-thu-tu">3</span> Bún Suông</a></li>
+        <li><a href="#mon-4"><span class="so-thu-tu">4</span> Bánh Tét Trà Cuôn</a></li>
+        <li><a href="#mon-5"><span class="so-thu-tu">5</span> Bánh Canh Bến Có</a></li>
+        <li><a href="#mon-6"><span class="so-thu-tu">6</span> Cháo Ám Trà Vinh</a></li>
+        <li><a href="#mon-7"><span class="so-thu-tu">7</span> Chả Hoa Năm Thụy</a></li>
+        <li><a href="#mon-8"><span class="so-thu-tu">8</span> Lẩu Mắm Trà Vinh</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. DANH SÁCH MÓN ĂN CHI TIẾT -->
+  <main>
+    <div class="tieu-de-khu-vuc">
+      <h2>Chi Tiết <span>Đặc Sản & Cách Chế Biến</span></h2>
+      <div class="gach-chan"></div>
+      <p>Nhấn vào nút "Xem công thức & chế biến" ở từng món để mở rộng bảng nguyên liệu và cách làm</p>
+    </div>
+    
+    <section class="danh-sach-mon">
+      
+      <!-- Món 1 -->
+      <article id="mon-1" class="mon-an">
+        <div class="phan-tren-mon">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1ZP7bENW3yRlCKjpDXjma3bQRjEmYK3WyotaWQbhoeA&s=10" alt="Dừa sáp Trà Vinh">
+          <div class="noi-dung-mon">
+            <h3>1. Dừa Sáp Cầu Kè</h3>
+            <p class="mo-ta">Đặc sản quý hiếm của vùng đất Cầu Kè với phần cơm dừa dày, dẻo quánh như sáp và béo ngậy. Thích hợp nhất làm món dầm đá giải khát mát lạnh.</p>
+            <div class="dia-chi">
+              <strong>📍 Địa chỉ tham khảo:</strong> Vựa dừa sáp Cầu Kè (Xã Cầu Kè) và các quán giải khát đặc sản tại Phường Trà Vinh.
+            </div>
+            <div class="hang-nut-bam">
+              <button class="nut-toggle" onclick="toggleCongThuc('ct-1', this)">Xem công thức & chế biến</button>
+              <a href="#muc-luc" class="nut-ve-muc-luc">↑ Về mục lục</a>
+            </div>
+          </div>
+        </div>
+        <!-- Công thức hàng ngang -->
+        <div id="ct-1" class="cong-thuc-ngang">
+          <div class="cot-nguyen-lieu">
+            <h4>🥥 Nguyên liệu chuẩn bị</h4>
+            <ul>
+              <li>Cơm dừa sáp: 1 trái</li>
+              <li>Sữa đặc có đường: 3 muỗng canh</li>
+              <li>Sữa tươi không đường: 50ml</li>
+              <li>Đậu phộng rang giã dập</li>
+              <li>Đá bào nhuyễn</li>
+            </ul>
+          </div>
+          <div class="cot-cach-lam">
+            <h4>👨‍🍳 Các bước chế biến & thưởng thức</h4>
+            <ol>
+              <li>Bổ đôi trái dừa, dùng muỗng nạo lấy phần cơm dừa sáp dẻo quánh cho vào ly.</li>
+              <li>Rưới sữa đặc và sữa tươi lên trên tùy theo khẩu vị ngọt béo.</li>
+              <li>Cho đá bào đầy ly, dùng muỗng dầm và trộn đều các nguyên liệu.</li>
+              <li>Rắc đậu phộng rang giã nhỏ lên bề mặt và thưởng thức ngay khi còn lạnh.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- Món 2 -->
+      <article id="mon-2" class="mon-an">
+        <div class="phan-tren-mon">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzTf7F5FpOkYwccBFyantV3H47bXz9A0g5AdtT8_crwA&s=10" alt="Bún nước lèo Trà Vinh">
+          <div class="noi-dung-mon">
+            <h3>2. Bún Nước Lèo</h3>
+            <p class="mo-ta">Hương vị giao thoa văn hóa Kinh – Khmer, nổi bật với nước dùng nấu từ mắm bò hóc đậm đà, ăn kèm thịt heo quay giòn bì, cá lóc, huyết và rau sống.</p>
+            <div class="dia-chi">
+              <strong>📍 Địa chỉ gợi ý:</strong><br>
+              • <strong>Bún nước lèo 5 Biên</strong> (Xã Càng Long)<br>
+              • Quán Bún nước lèo Ba Cô (Đường Lê Lợi, Phường Trà Vinh)
+            </div>
+            <div class="hang-nut-bam">
+              <button class="nut-toggle" onclick="toggleCongThuc('ct-2', this)">Xem công thức & chế biến</button>
+              <a href="#muc-luc" class="nut-ve-muc-luc">↑ Về mục lục</a>
+            </div>
+          </div>
+        </div>
+        <div id="ct-2" class="cong-thuc-ngang">
+          <div class="cot-nguyen-lieu">
+            <h4>🍲 Nguyên liệu chuẩn bị</h4>
+            <ul>
+              <li>Bún tươi sợi nhỏ: 1kg</li>
+              <li>Mắm bò hóc (hoặc mắm cá linh): 200g</li>
+              <li>Cá lóc đồng: 1 con (khoảng 700g)</li>
+              <li>Thịt heo quay, huyết heo luộc</li>
+              <li>Ngải bún, sả cây, rau ghém (bắp chuối, giá, hẹ)</li>
+            </ul>
+          </div>
+          <div class="cot-cach-lam">
+            <h4>👨‍🍳 Các bước chế biến & thưởng thức</h4>
+            <ol>
+              <li>Nấu mắm với nước và sả đập dập cho rã thịt, sau đó lọc qua rây lấy phần nước cốt trong.</li>
+              <li>Luộc chín cá lóc, gỡ lấy phần thịt nạc để riêng.</li>
+              <li>Đập dập ngải bún và sả phi thơm cho vào nồi nước lèo, nêm gia vị vừa ăn.</li>
+              <li>Trụng bún vào tô, xếp thịt cá lóc, heo quay, huyết lên trên rồi chan nước lèo nóng hổi.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- Món 3 -->
+      <article id="mon-3" class="mon-an">
+        <div class="phan-tren-mon">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjQdld3_dcMQlL5ZI0KlTdhnqZ7vxViHX3iNNnRvQNKQ&s=10" alt="Bún suông Trà Vinh">
+          <div class="noi-dung-mon">
+            <h3>3. Bún Suông (Bún Đuông)</h3>
+            <p class="mo-ta">Món bún độc đáo với những con “suông” làm từ tôm tươi quết nhuyễn nặn thành thanh dài dai giòn, chan nước dùng màu hạt điều thơm lừng.</p>
+            <div class="dia-chi">
+              <strong>📍 Địa chỉ tham khảo:</strong> Quán bún suông cô Tư (Đường Điện Biên Phủ, Phường Trà Vinh).
+            </div>
+            <div class="hang-nut-bam">
+              <button class="nut-toggle" onclick="toggleCongThuc('ct-3', this)">Xem công thức & chế biến</button>
+              <a href="#muc-luc" class="nut-ve-muc-luc">↑ Về mục lục</a>
+            </div>
+          </div>
+        </div>
+        <div id="ct-3" class="cong-thuc-ngang">
+          <div class="cot-nguyen-lieu">
+            <h4>🍤 Nguyên liệu chuẩn bị</h4>
+            <ul>
+              <li>Tôm sú tươi bóc vỏ: 500g</li>
+              <li>Xương ống heo & thịt ba chỉ: 500g</li>
+              <li>Bún tươi, hành tím, tỏi băm</li>
+              <li>Dầu hạt điều màu, tương hột xay</li>
+              <li>Rau sống, giá đỗ, chanh ớt</li>
+            </ul>
+          </div>
+          <div class="cot-cach-lam">
+            <h4>👨‍🍳 Các bước chế biến & thưởng thức</h4>
+            <ol>
+              <li>Tôm tươi quết thật nhuyễn cùng đầu hành, tiêu, hạt nêm cho dai rồi cho vào túi bắt kem.</li>
+              <li>Ninh xương heo lấy nước ngọt, thêm dầu điều tạo màu cam đẹp mắt và nêm gia vị.</li>
+              <li>Nặn từng thanh chả tôm dài thả trực tiếp vào nồi nước dùng đang sôi, chả nổi lên là chín.</li>
+              <li>Xếp bún, thịt ba chỉ thái mỏng, chả suông vào tô, chan nước dùng và chấm kèm tương xay.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- Món 4 -->
+      <article id="mon-4" class="mon-an">
+        <div class="phan-tren-mon">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBek9383Uy5sttIqNCvTjzEdAmPSVEgws0ngZU1XRIQg&s=10" alt="Bánh tét Trà Cuôn">
+          <div class="noi-dung-mon">
+            <h3>4. Bánh Tét Trà Cuôn</h3>
+            <p class="mo-ta">Nổi tiếng khắp miền Tây với hạt nếp sáp dẻo thơm nhuộm màu xanh tự nhiên từ lá ngót, kết hợp nhân đậu xanh, thịt mỡ và trứng muối bùi béo.</p>
+            <div class="dia-chi">
+              <strong>📍 Địa chỉ tham khảo:</strong> Làng nghề bánh tét Trà Cuôn (Xã Kim Hòa, khu vực Châu Thành cũ).
+            </div>
+            <div class="hang-nut-bam">
+              <button class="nut-toggle" onclick="toggleCongThuc('ct-4', this)">Xem công thức & chế biến</button>
+              <a href="#muc-luc" class="nut-ve-muc-luc">↑ Về mục lục</a>
+            </div>
+          </div>
+        </div>
+        <div id="ct-4" class="cong-thuc-ngang">
+          <div class="cot-nguyen-lieu">
+            <h4>🍃 Nguyên liệu chuẩn bị</h4>
+            <ul>
+              <li>Nếp sáp ngon: 2kg</li>
+              <li>Rau ngót tươi xay lấy nước cốt xanh</li>
+              <li>Đậu xanh đãi vỏ: 500g</li>
+              <li>Thịt ba chỉ ướp gia vị: 500g</li>
+              <li>Lòng đỏ trứng muối, lá chuối, dây buộc</li>
+            </ul>
+          </div>
+          <div class="cot-cach-lam">
+            <h4>👨‍🍳 Các bước chế biến & thưởng thức</h4>
+            <ol>
+              <li>Vo sạch nếp, ngâm với nước cốt lá ngót khoảng 4 tiếng để nếp lên màu xanh đẹp và thơm.</li>
+              <li>Đậu xanh nấu chín tán nhuyễn, dàn đều bọc lấy nhân thịt ba chỉ và lòng đỏ trứng muối ở giữa.</li>
+              <li>Trải lá chuối, dàn lớp nếp rồi đặt đòn nhân vào giữa, cuộn tròn và buộc dây thật chặt tay.</li>
+              <li>Luộc bánh ngập nước liên tục từ 10 – 12 tiếng cho nếp chín dẻo rền.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- Món 5 -->
+      <article id="mon-5" class="mon-an">
+        <div class="phan-tren-mon">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQILDKpsBJSXWhBjyT_5D7LcoBG6w8SogHR-k-0XHHjnA&s=10" alt="Bánh canh Bến Có">
+          <div class="noi-dung-mon">
+            <h3>5. Bánh Canh Bến Có</h3>
+            <p class="mo-ta">Sợi bánh canh bột gạo xắt tay mềm dai vừa phải, nước dùng trong vắt ngọt thanh tự nhiên từ xương hầm cùng thịt giò heo và lòng heo.</p>
+            <div class="dia-chi">
+              <strong>📍 Địa chỉ tham khảo:</strong> Khu vực Bến Có (Phường Nguyệt Hóa).
+            </div>
+            <div class="hang-nut-bam">
+              <button class="nut-toggle" onclick="toggleCongThuc('ct-5', this)">Xem công thức & chế biến</button>
+              <a href="#muc-luc" class="nut-ve-muc-luc">↑ Về mục lục</a>
+            </div>
+          </div>
+        </div>
+        <div id="ct-5" class="cong-thuc-ngang">
+          <div class="cot-nguyen-lieu">
+            <h4>🍜 Nguyên liệu chuẩn bị</h4>
+            <ul>
+              <li>Bánh canh bột gạo xắt: 1kg</li>
+              <li>Giò heo & xương ống: 1kg</li>
+              <li>Tim, gan, phèo non heo (tùy thích)</li>
+              <li>Hành lá, ngò rí, hành phi, tiêu xay</li>
+              <li>Nước mắm ngon, ớt xắt lát</li>
+            </ul>
+          </div>
+          <div class="cot-cach-lam">
+            <h4>👨‍🍳 Các bước chế biến & thưởng thức</h4>
+            <ol>
+              <li>Chần sơ xương và giò heo qua nước sôi cho sạch, sau đó hầm lửa nhỏ và vớt bọt thường xuyên để nước trong.</li>
+              <li>Luộc chín các loại lòng heo, vớt ra ngâm nước lạnh cho trắng giòn rồi thái miếng vừa ăn.</li>
+              <li>Trụng sợi bánh canh cho vào tô, xếp thịt giò, lòng heo, rắc hành ngò và chan nước dùng nóng.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- Món 6 -->
+      <article id="mon-6" class="mon-an">
+        <div class="phan-tren-mon">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWE4bpmRfrJarDwmTsPBWQlV3ZMfGiuO_bHoRpPr2JxQ&s=10" alt="Cháo ám Trà Vinh">
+          <div class="noi-dung-mon">
+            <h3>6. Cháo Ám Trà Vinh</h3>
+            <p class="mo-ta">Món cháo cá lóc dân dã được nấu cùng nước cốt dừa béo ngậy và hành tím phi thơm lừng, ăn kèm rau đắng đất thanh mát.</p>
+            <div class="dia-chi">
+              <strong>📍 Địa chỉ tham khảo:</strong> Các quán ăn dân gian, quán đặc sản truyền thống tại Phường Trà Vinh.
+            </div>
+            <div class="hang-nut-bam">
+              <button class="nut-toggle" onclick="toggleCongThuc('ct-6', this)">Xem công thức & chế biến</button>
+              <a href="#muc-luc" class="nut-ve-muc-luc">↑ Về mục lục</a>
+            </div>
+          </div>
+        </div>
+        <div id="ct-6" class="cong-thuc-ngang">
+          <div class="cot-nguyen-lieu">
+            <h4>🥣 Nguyên liệu chuẩn bị</h4>
+            <ul>
+              <li>Gạo tẻ ngon: 1 lon</li>
+              <li>Cá lóc đồng: 1 con (khoảng 800g)</li>
+              <li>Nước cốt dừa tươi: 200ml</li>
+              <li>Hành tím phi vàng, gừng thái sợi</li>
+              <li>Rau đắng đất, giá đỗ, hành ngò</li>
+            </ul>
+          </div>
+          <div class="cot-cach-lam">
+            <h4>👨‍🍳 Các bước chế biến & thưởng thức</h4>
+            <ol>
+              <li>Gạo vo sạch, rang sơ trên chảo cho hạt gạo săn lại rồi đem nấu nhừ thành cháo.</li>
+              <li>Cá lóc làm sạch, luộc chín với vài lát gừng cho thơm, vớt ra gỡ lấy phần thịt cá.</li>
+              <li>Cho nước cốt dừa và thịt cá lóc vào nồi cháo, nêm gia vị vừa ăn, rắc hành phi và ăn nóng cùng rau đắng.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- Món 7 -->
+      <article id="mon-7" class="mon-an">
+        <div class="phan-tren-mon">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdHwPSvpoH931g62jaSCARJa5z77KStPizy9FPBN2D4A&s=10" alt="Chả hoa Năm Thụy">
+          <div class="noi-dung-mon">
+            <h3>7. Chả Hoa Năm Thụy</h3>
+            <p class="mo-ta">Đặc sản trứ danh với lát cắt tạo hình bông hoa ngũ sắc đẹp mắt, hòa quyện vị giòn sần sật của tai heo, nấm mèo cùng trứng muối bùi béo.</p>
+            <div class="dia-chi">
+              <strong>📍 Địa chỉ tham khảo:</strong> Cơ sở Chả hoa Năm Thụy (Phường Trà Vinh).
+            </div>
+            <div class="hang-nut-bam">
+              <button class="nut-toggle" onclick="toggleCongThuc('ct-7', this)">Xem công thức & chế biến</button>
+              <a href="#muc-luc" class="nut-ve-muc-luc">↑ Về mục lục</a>
+            </div>
+          </div>
+        </div>
+        <div id="ct-7" class="cong-thuc-ngang">
+          <div class="cot-nguyen-lieu">
+            <h4>🌸 Nguyên liệu chuẩn bị</h4>
+            <ul>
+              <li>Giò sống (mọc): 500g</li>
+              <li>Trứng gà tươi: 4 quả</li>
+              <li>Lòng đỏ trứng muối: 5 cái</li>
+              <li>Tai heo luộc giòn, nấm mèo (mộc nhĩ)</li>
+              <li>Cà rốt thái hạt lựu, gia vị, lá chuối</li>
+            </ul>
+          </div>
+          <div class="cot-cach-lam">
+            <h4>👨‍🍳 Các bước chế biến & thưởng thức</h4>
+            <ol>
+              <li>Đánh tan trứng gà rồi tráng thành những lớp mỏng làm vỏ bọc ngoài cùng.</li>
+              <li>Trộn đều giò sống với tai heo thái sợi, nấm mèo, cà rốt và tiêu hạt.</li>
+              <li>Trải lớp trứng tráng, phết hỗn hợp giò sống lên, xếp hàng lòng đỏ trứng muối vào giữa rồi cuộn tròn chắc tay.</li>
+              <li>Bọc kín bằng lá chuối hoặc giấy bạc, đem hấp cách thủy khoảng 45 phút cho chín đều.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- Món 8 -->
+      <article id="mon-8" class="mon-an">
+        <div class="phan-tren-mon">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5TBxeSFv3I4rVnYW8QXyA5xGBG5J3LK_QZIck1uxAqg&s=10" alt="Lẩu mắm Trà Vinh">
+          <div class="noi-dung-mon">
+            <h3>8. Lẩu Mắm Trà Vinh</h3>
+            <p class="mo-ta">Nồi lẩu đậm đà hương vị mắm cá linh, cá sặc miền Tây, ăn kèm đĩa hải sản tươi sống, thịt ba rọi và hàng chục loại rau đồng phong phú.</p>
+            <div class="dia-chi">
+              <strong>📍 Địa chỉ tham khảo:</strong> Các nhà hàng, quán lẩu hải sản và lẩu mắm tại Phường Trà Vinh.
+            </div>
+            <div class="hang-nut-bam">
+              <button class="nut-toggle" onclick="toggleCongThuc('ct-8', this)">Xem công thức & chế biến</button>
+              <a href="#muc-luc" class="nut-ve-muc-luc">↑ Về mục lục</a>
+            </div>
+          </div>
+        </div>
+        <div id="ct-8" class="cong-thuc-ngang">
+          <div class="cot-nguyen-lieu">
+            <h4>🥘 Nguyên liệu chuẩn bị</h4>
+            <ul>
+              <li>Mắm cá linh & mắm cá sặc: 300g</li>
+              <li>Tôm tươi, mực ống, cá hú/cá ba sa</li>
+              <li>Thịt ba rọi thái mỏng, cà tím, sả băm</li>
+              <li>Nước dừa tươi: 1 lít</li>
+              <li>Rau đồng: bông súng, kèo nèo, rau nhút, đọt choại</li>
+            </ul>
+          </div>
+          <div class="cot-cach-lam">
+            <h4>👨‍🍳 Các bước chế biến & thưởng thức</h4>
+            <ol>
+              <li>Nấu mắm cá linh và cá sặc với nước cho rã hết thịt, lược bỏ xương lấy nước cốt đậm đặc.</li>
+              <li>Phi thơm sả băm, tỏi ớt rồi đổ nước cốt mắm và nước dừa tươi vào đun sôi.</li>
+              <li>Cho cà tím cắt khúc vào nồi nước lẩu, nêm nếm lại vị mặn ngọt hài hòa.</li>
+              <li>Dọn nồi lẩu lên bếp mini, nhúng tôm, mực, thịt ba rọi và các loại rau đồng ăn kèm bún tươi.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>Đặc sản Trà Vinh · Hương vị miền Tây Nam Bộ · Thiết kế tối ưu trải nghiệm người dùng</footer>
+
+  <!-- Script xử lý ẩn/hiện phần công thức hàng ngang -->
+  <script>
+    function toggleCongThuc(id, button) {
+      var khungCongThuc = document.getElementById(id);
+      if (khungCongThuc.classList.contains("dang-mo")) {
+        khungCongThuc.classList.remove("dang-mo");
+        button.innerText = "Xem công thức & chế biến";
+        button.style.backgroundColor = "#27ae60";
+      } else {
+        khungCongThuc.classList.add("dang-mo");
+        button.innerText = "Thu gọn công thức";
+        button.style.backgroundColor = "#e74c3c";
+      }
+    }
+  </script>
+</body>
+</html>
